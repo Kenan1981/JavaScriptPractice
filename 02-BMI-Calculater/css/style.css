@@ -1,0 +1,121 @@
+.title {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.display {
+	background-color: gray;
+	display: flex;
+	position: relative;
+	height: 5px;
+	margin: 80px 30px;
+}
+
+.display .stage1 {
+	background-image: linear-gradient(90deg, gray, yellowgreen);
+	flex-basis: 38%;
+}
+
+.display .stage2 {
+	background-color: yellowgreen;
+	flex-basis: 13%;
+}
+
+.display .stage3 {
+	background-image: linear-gradient(90deg, yellowgreen, pink);
+	flex-basis: 9%;
+}
+
+.display .stage4 {
+	background-image: linear-gradient(90deg, pink, red);
+	flex-basis: 40%;
+}
+
+
+
+.display > div[class^="stage"]{
+    position: relative;
+}
+
+.display > div[class^="stage"]::before {
+    text-align: center;
+    width: 100%;
+    display: block;
+    position: absolute;
+    border-left: 1px solid gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.display .stage1::before {
+	content: "Thin";
+}
+
+.display .stage2::before {
+	content: "Ideal";
+}
+
+.display .stage3::before {
+	content: "Overweight";
+}
+
+.display .stage4::before {
+	content: "Obese";
+    border-right: 1px solid gray;
+}
+
+
+.display .indicator {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all 0.5s ;
+    -webkit-transition: all 0.5s ;
+    -moz-transition: all 0.5s ;
+    -ms-transition: all 0.5s ;
+    -o-transition: all 0.5s ;
+}
+
+.display .indicator .label{
+    position: absolute;
+    left:20px;
+    background-color: gray;
+    display: inline-block;
+    padding:2px 5px;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.frmBmi {
+	margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.frmBmi .input-group{
+    flex: 1 1 300px;
+}
+
+/*
+BMI
+0-18 => Zayif  %38
+19-25 => Normal  %13
+26-30 => Kilolu %9
+30-50 => Obez  %40
+*/

@@ -1,0 +1,77 @@
+:root{
+    --color1: rgb(120,120,120);
+    --color2: rgb(20,20,20);
+    --color3: rgb(40,40,40);
+    --color4: rgb(233,233,233);
+}
+body{
+    background-color: var(--color2);
+}
+.password-generator{
+    width: 350px;
+    margin: 40px auto;
+    color: var(--color1);
+}
+.password-generator h5{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.password-generator .password{
+    background-color: var(--color3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--color4);
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.password-generator .password button{
+    font-size: 1.5rem;
+}
+
+.password-generator .settings{
+    background-color: var(--color3);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.password-generator .char-length-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-generator .form-check{
+    margin-top: 10px;
+}
+.password-generator .strength{
+    background-color: var(--color2);
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+.password-generator .strength h6{
+    margin: 0;
+}
+.password-generator .settings button{
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 500;
+}
+/*  */
+
+.weak{
+    color: red;
+    font-size: 1.2rem;
+}
+.normal{
+    color: yellow;
+    font-size: 1.2rem;
+}
+.strong{
+    color: green;
+    font-size: 1.2rem;
+}
